@@ -131,16 +131,23 @@ dict_value { # test after dict start token on same line
 //                   ^ punctuation.definition.comment.textproto
 //                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.number-sign.textproto         
   #test between code
-// <~- punctuation.whitespace.comment.leading.textproto
+// <-- punctuation.whitespace.comment.leading.textproto
 // <~~- punctuation.definition.comment.textproto
-// <~~----------------------------------------- comment.line.number-sign.textproto         
+// <~~----------------- comment.line.number-sign.textproto         
   # test successive lines
-// <~- punctuation.whitespace.comment.leading.textproto
+// <-- punctuation.whitespace.comment.leading.textproto
 // <~~- punctuation.definition.comment.textproto
-// <~~----------------------------------------- comment.line.number-sign.textproto         
+// <~~----------------------- comment.line.number-sign.textproto         
 
 [test]: #{dict:"value"} # test commented value
 //     ^ punctuation.whitespace.comment.leading.textproto
 //      ^ punctuation.definition.comment.textproto
 //      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.number-sign.textproto         
 //                      ^ - punctuation.definition.comment.textproto
+
+separated_value: -
+  # test between sign and literal
+// <-- punctuation.whitespace.comment.leading.textproto
+// <~~- punctuation.definition.comment.textproto
+// <~~------------------------------- comment.line.number-sign.textproto
+  2.0
